@@ -1,23 +1,19 @@
 import { Types } from "mongoose";
-
-export enum Role {
+export declare enum Role {
     SUPER_ADMIN = "SUPER_ADMIN",
     ADMIN = "ADMIN",
     USER = "USER",
-    DRIVER = "DRIVER",
+    DRIVER = "DRIVER"
 }
-
 export interface IAuthProvider {
-    provider: string,
-    providerId: string
+    provider: string;
+    providerId: string;
 }
-
-export enum IsActive {
+export declare enum IsActive {
     ACTIVE = "ACTIVE",
     INACTIVE = "INACTIVE",
-    BLOCKED = "BLOCKED",
+    BLOCKED = "BLOCKED"
 }
-
 export interface IUser {
     name: string;
     email: string;
@@ -31,7 +27,6 @@ export interface IUser {
     role: Role;
     bookings?: Types.ObjectId[];
     drivers?: Types.ObjectId[];
-
-    auths: IAuthProvider[]
-
+    auths: IAuthProvider[];
 }
+//# sourceMappingURL=user.interface.d.ts.map

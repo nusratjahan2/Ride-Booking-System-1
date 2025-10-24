@@ -18,7 +18,7 @@ import { sendResponse } from "../../app/utils/sendResponse";
 //     }
 // }
 
-const createUser = catchAsync(async (req: Request, res: Response, next: NextFunction) => {
+const createUser = catchAsync(async (req: Request, res: Response) => {
     const user = await createUserService(req.body);
     sendResponse(res,{
         statusCode: httpStatus.CREATED,
